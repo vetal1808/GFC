@@ -25,8 +25,8 @@
 
 void MadgwickAHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz);
 void MadgwickAHRSupdateIMU(float gx, float gy, float gz, float ax, float ay, float az);
-Quaternion GetMadgwickAHRSQuaternion();
-Quaternion GetOffsetMadgwickAHRSQuaternion();
+void GetMadgwickAHRSQuaternion(Quaternion *quaternion);
+void GetOffsetedMadgwickAHRSQuaternion(Quaternion *offseted_quaternion);
 #endif
 //=====================================================================================================
 // End of file

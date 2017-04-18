@@ -54,18 +54,20 @@ void quaternionDecomposition(Quaternion * quaternion, Vector3  * rotationAngles)
 
 
 }
-void quaternionComposition(EuclidAngles rotationAngles, Quaternion * quaternion){
+void quaternionComposition(EuclidAngles *rotationAngles, Quaternion * quaternion){
 
-	radianNormalaize(&rotationAngles.pitch);
-	radianNormalaize(&rotationAngles.roll);
-	radianNormalaize(&rotationAngles.yaw);
+	radianNormalaize(&rotationAngles->pitch);
+	radianNormalaize(&rotationAngles->roll);
+	radianNormalaize(&rotationAngles->yaw);
 
 	quaternion->q0 = 0.0f;
-	quaternion->q1 = rotationAngles.pitch;
-	quaternion->q2 = rotationAngles.roll;
-	quaternion->q3 = rotationAngles.yaw;
+	quaternion->q1 = rotationAngles->pitch;
+	quaternion->q2 = rotationAngles->roll;
+	quaternion->q3 = rotationAngles->yaw;
 	normalaseQuaternion(quaternion);
-	float angle = sqrt(rotationAngles.pitch * rotationAngles.pitch + rotationAngles.roll * rotationAngles.roll + rotationAngles.yaw * rotationAngles.yaw);
+	float angle = sqrt(rotationAngles->pitch * rotationAngles->pitch +
+						rotationAngles->roll * rotationAngles->roll +
+						rotationAngles->yaw * rotationAngles->yaw);
 	angle *= 0.5f;
 	quaternion->q0 = -cosf(angle);
 	float sin_half_angle = sinf(angle);
@@ -75,14 +77,14 @@ void quaternionComposition(EuclidAngles rotationAngles, Quaternion * quaternion)
 	normalaseQuaternion(quaternion);
 }
 void convertRadiansToIntArcMinutes(EuclidAngles * euclid_angles, Vector3_int16 * arc_min){
-	arc_min->x = (int16_t)(euclid_angles->pitch * rad_to_minuteArc);
-	arc_min->y = (int16_t)(euclid_angles->roll * rad_to_minuteArc);
-	arc_min->z = (int16_t)(euclid_angles->yaw * rad_to_minuteArc);
+	arc_min->x = (int16_t)(euclid_angles->pitch * RAD_TO_ARC_MINUTE);
+	arc_min->y = (int16_t)(euclid_angles->roll * RAD_TO_ARC_MINUTE);
+	arc_min->z = (int16_t)(euclid_angles->yaw * RAD_TO_ARC_MINUTE);
 }
 void convertIntArcMinutesToRadians(Vector3_int16 * arc_min, EuclidAngles * euclid_angles){
-	euclid_angles->pitch = (float) arc_min->x * minuteArc_to_rad;
-	euclid_angles->roll = (float) arc_min->y * minuteArc_to_rad;
-	euclid_angles->yaw = (float) arc_min->z * minuteArc_to_rad;
+	euclid_angles->pitch = (float) arc_min->x * ARC_MINUTE_TO_RAD;
+	euclid_angles->roll = (float) arc_min->y * ARC_MINUTE_TO_RAD;
+	euclid_angles->yaw = (float) arc_min->z * ARC_MINUTE_TO_RAD;
 }
 void normalaseQuaternion(Quaternion * q){
 
@@ -138,8 +140,15 @@ void rotateVector3ByQuatern(Quaternion * q, Vector3 * return_vector)
 	q2q2 = q->q2 * q->q2;
 	q2q3 = q->q2 * q->q3;
 	q3q3 = q->q3 * q->q3;
-	float _x = return_vector->x, _y = return_vector->y, _z = return_vector->z;
+	float _x = return_vector->x; 
+	float _y = return_vector->y; 
+	float _z = return_vector->z;
 	return_vector->x = 2.0f * ((0.5f - q2q2 - q3q3)*_x + (q1q2 - q0q3)*(_y)		 + (q1q3 + q0q2)*(_z));
 	return_vector->y = 2.0f * ((q1q2 + q0q3)*_x 		 + (0.5f - q1q1 - q3q3)*(_y) + (q2q3 - q0q1)*(_z));
 	return_vector->z = 2.0f * ((q1q3 - q0q2)*_x 		 + (q2q3 + q0q1)*(_y) 	     + (0.5f - q1q1 - q2q2)*(_z));
+}
+float projectionOfNormalVectorToGlobalZ(Quaternion * q){
+	float q1q1 = q->q1 * q->q1;
+	float q2q2 = q->q2 * q->q2;
+	return 2.0f * (0.5f - q1q1 - q2q2);
 }

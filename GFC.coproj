@@ -66,6 +66,7 @@
       <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F10x_MD_64.elf"/>
+      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd C:/Users/vetal/Documents/projects/GFC/GFC/Debug/bin restore GFC.elf set {unsigned int*}0xE000ED08 = 0x20000000 set $sp = {unsigned int*}0x20000000 set $pc = {unsigned int*}0x20000004 "/>
     </DebugOption>
     <ExcludeFile/>
   </Target>
@@ -84,92 +85,114 @@
     <Component id="492" name="Misc" path="" type="2"/>
   </Components>
   <Files>
-    <File name="helpers/q_config.h" path="GFC/remote_control/q_config.h" type="1"/>
     <File name="drivers/ESC_control" path="" type="2"/>
+    <File name="helpers/types/types.c" path="GFC/types.c" type="1"/>
     <File name="drivers/ESC_control/ESC_control.h" path="GFC/drivers/ESC_control/ESC_control.h" type="1"/>
     <File name="algorithms/stab_algorithms/PID.h" path="GFC/algorithms/stab_algorithm/PID.h" type="1"/>
-    <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
-    <File name="cmsis_boot" path="" type="2"/>
     <File name="algorithms/MadgwickAHRS/quaternion.h" path="GFC/algorithms/MadgwickAHRS/quaternion.h" type="1"/>
     <File name="algorithms/MadgwickAHRS" path="" type="2"/>
     <File name="remote control/radio_control.c" path="GFC/remote_control/radio_control.c" type="1"/>
     <File name="algorithms" path="" type="2"/>
-    <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
-    <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
-    <File name="helpers/types.c" path="GFC/types.c" type="1"/>
-    <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
+    <File name="multicopter" path="" type="2"/>
     <File name="sensors/gps_parser/gps_parser.c" path="GFC/sensors/gps_parser/gps_parser.c" type="1"/>
-    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="algorithms/stab_algorithms" path="" type="2"/>
-    <File name="sensors/bmp085" path="" type="2"/>
-    <File name="helpers/helpers.h" path="GFC/helpers/helpers.h" type="1"/>
+    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="sensors/mpu6050/mpu6050.c" path="GFC/sensors/MPU6050/mpu6050.c" type="1"/>
-    <File name="drivers/i2c routines/I2CRoutines.c" path="GFC/drivers/i2c_routines/I2CRoutines.c" type="1"/>
-    <File name="drivers/easy_uart/easy_uart.h" path="GFC/drivers/easy_uart/easy_uart.h" type="1"/>
+    <File name="sensors/hmc5883L/HMC5883L.h" path="GFC/sensors/HMC5883L/HMC5883L.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
-    <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
+    <File name="drivers/easy_uart/easy_uart.h" path="GFC/drivers/easy_uart/easy_uart.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
     <File name="drivers/timer/timer.h" path="GFC/drivers/timer/timer.h" type="1"/>
-    <File name="sensors/mpu6050/mpu6050.h" path="GFC/sensors/MPU6050/mpu6050.h" type="1"/>
+    <File name="algorithms/orientation/orientation.h" path="GFC/algorithms/orientation/orientation.h" type="1"/>
     <File name="algorithms/stab_algorithms/stab_algorithm.c" path="GFC/algorithms/stab_algorithm/stab_algorithm.c" type="1"/>
-    <File name="sensors/sonar/sonar.c" path="GFC/sensors/sonar/sonar.c" type="1"/>
-    <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
     <File name="remote control/telemetry.c" path="GFC/remote_control/telemetry.c" type="1"/>
-    <File name="sensors/mpu6050" path="" type="2"/>
-    <File name="helpers/types.h" path="GFC/types.h" type="1"/>
+    <File name="algorithms/motor_algorithm/motor_algorithm.h" path="GFC/algorithms/motor_algorithm/motor_algorithm.h" type="1"/>
     <File name="algorithms/MadgwickAHRS/MadgwickAHRS.c" path="GFC/algorithms/MadgwickAHRS/MadgwickAHRS.c" type="1"/>
     <File name="algorithms/MadgwickAHRS/quaternion.c" path="GFC/algorithms/MadgwickAHRS/quaternion.c" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
     <File name="sensors/bmp085/BMP085_high.c" path="GFC/sensors/BMP085/BMP085_high.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
-    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
-    <File name="drivers/timer" path="" type="2"/>
     <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
+    <File name="helpers/AB_filter/AB_filter.h" path="GFC/helpers/AB_filter/AB_filter.h" type="1"/>
+    <File name="algorithms/orientation" path="" type="2"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
+    <File name="algorithms/orientation/orientation.c" path="GFC/algorithms/orientation/orientation.c" type="1"/>
+    <File name="algorithms/altitude_algorithm/altitude_algorithm.h" path="GFC/algorithms/altitude_algorithm/altitude_algorithm.h" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
+    <File name="remote control/radio_channel.c" path="GFC/remote_control/radio_channel.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
+    <File name="helpers/AB_filter" path="" type="2"/>
+    <File name="drivers" path="" type="2"/>
+    <File name="helpers/helpers.c" path="GFC/helpers/helpers.c" type="1"/>
+    <File name="sensors/bmp085/BMP085_low.c" path="GFC/sensors/BMP085/BMP085_low.c" type="1"/>
+    <File name="helpers/types" path="" type="2"/>
+    <File name="sensors/bmp085/BMP085_high.h" path="GFC/sensors/BMP085/BMP085_high.h" type="1"/>
+    <File name="drivers/ESC_control/ESC_control.c" path="GFC/drivers/ESC_control/ESC_control.c" type="1"/>
+    <File name="algorithms/motor_algorithm/motor_algorithm.c" path="GFC/algorithms/motor_algorithm/motor_algorithm.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_dma.c" path="stm_lib/src/stm32f10x_dma.c" type="1"/>
+    <File name="remote control/telemetry.h" path="GFC/remote_control/telemetry.h" type="1"/>
+    <File name="stm_lib/src" path="" type="2"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="stm_lib" path="" type="2"/>
+    <File name="helpers/AB_filter/AB_filter.c" path="GFC/helpers/AB_filter/AB_filter.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_exti.h" path="stm_lib/inc/stm32f10x_exti.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_adc.h" path="stm_lib/inc/stm32f10x_adc.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
+    <File name="algorithms/stab_algorithms/PID.c" path="GFC/algorithms/stab_algorithm/PID.c" type="1"/>
+    <File name="helpers/FIR_filter/FIR_filter.c" path="GFC/helpers/FIR_filter/FIR_filter.c" type="1"/>
+    <File name="algorithms/altitude_algorithm/altitude_algorithm.c" path="GFC/algorithms/altitude_algorithm/altitude_algorithm.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_i2c.c" path="stm_lib/src/stm32f10x_i2c.c" type="1"/>
+    <File name="drivers/timer/timer.c" path="GFC/drivers/timer/timer.c" type="1"/>
+    <File name="sensors/hmc5883L/HMC5883L.c" path="GFC/sensors/HMC5883L/HMC5883L.c" type="1"/>
+    <File name="drivers/easy_uart/easy_uart.c" path="GFC/drivers/easy_uart/easy_uart.c" type="1"/>
+    <File name="helpers/types/types.h" path="GFC/types.h" type="1"/>
+    <File name="helpers" path="" type="2"/>
+    <File name="main.c" path="main.c" type="1"/>
+    <File name="remote control/radio_control.h" path="GFC/remote_control/radio_control.h" type="1"/>
+    <File name="sensors/bmp085/BMP085_low.h" path="GFC/sensors/BMP085/BMP085_low.h" type="1"/>
+    <File name="helpers/q_config.h" path="GFC/remote_control/q_config.h" type="1"/>
+    <File name="algorithms/motor_algorithm" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
+    <File name="sensors/bmp085" path="" type="2"/>
+    <File name="helpers/helpers.h" path="GFC/helpers/helpers.h" type="1"/>
+    <File name="drivers/i2c routines/I2CRoutines.c" path="GFC/drivers/i2c_routines/I2CRoutines.c" type="1"/>
+    <File name="sensors/mpu6050/mpu6050.h" path="GFC/sensors/MPU6050/mpu6050.h" type="1"/>
+    <File name="sensors/sonar/sonar.c" path="GFC/sensors/sonar/sonar.c" type="1"/>
+    <File name="remote control/radio_channel.h" path="GFC/remote_control/radio_channel.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
+    <File name="sensors/mpu6050" path="" type="2"/>
+    <File name="drivers/timer" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
+    <File name="helpers/FIR_filter/FIR_filter.h" path="GFC/helpers/FIR_filter/FIR_filter.h" type="1"/>
+    <File name="helpers/FIR_filter" path="" type="2"/>
     <File name="algorithms/MadgwickAHRS/MadgwickAHRS.h" path="GFC/algorithms/MadgwickAHRS/MadgwickAHRS.h" type="1"/>
     <File name="sensors/gps_parser/gps_parser.h" path="GFC/sensors/gps_parser/gps_parser.h" type="1"/>
     <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
     <File name="sensors" path="" type="2"/>
     <File name="stm_lib/src/stm32f10x_exti.c" path="stm_lib/src/stm32f10x_exti.c" type="1"/>
-    <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
     <File name="drivers/easy_uart" path="" type="2"/>
     <File name="sensors/sonar/sonar.h" path="GFC/sensors/sonar/sonar.h" type="1"/>
     <File name="sensors/sonar" path="" type="2"/>
-    <File name="drivers" path="" type="2"/>
-    <File name="sensors/bmp085/BMP085_low.c" path="GFC/sensors/BMP085/BMP085_low.c" type="1"/>
     <File name="sensors/gps_parser" path="" type="2"/>
-    <File name="helpers/helpers.c" path="GFC/helpers/helpers.c" type="1"/>
-    <File name="sensors/bmp085/BMP085_high.h" path="GFC/sensors/BMP085/BMP085_high.h" type="1"/>
-    <File name="drivers/ESC_control/ESC_control.c" path="GFC/drivers/ESC_control/ESC_control.c" type="1"/>
-    <File name="stm_lib/src/stm32f10x_dma.c" path="stm_lib/src/stm32f10x_dma.c" type="1"/>
-    <File name="remote control/radio_channal.h" path="GFC/remote_control/radio_channal.h" type="1"/>
-    <File name="stm_lib/src" path="" type="2"/>
-    <File name="remote control/telemetry.h" path="GFC/remote_control/telemetry.h" type="1"/>
-    <File name="cmsis" path="" type="2"/>
-    <File name="stm_lib" path="" type="2"/>
-    <File name="stm_lib/inc/stm32f10x_exti.h" path="stm_lib/inc/stm32f10x_exti.h" type="1"/>
-    <File name="stm_lib/inc/stm32f10x_adc.h" path="stm_lib/inc/stm32f10x_adc.h" type="1"/>
-    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
-    <File name="algorithms/stab_algorithms/PID.c" path="GFC/algorithms/stab_algorithm/PID.c" type="1"/>
-    <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
+    <File name="helpers/FIR_filter/FIR_filter_config.h" path="GFC/helpers/FIR_filter/FIR_filter_config.h" type="1"/>
+    <File name="sensors/hmc5883L" path="" type="2"/>
+    <File name="algorithms/stab_algorithms/stab_algorithm_config.h" path="GFC/algorithms/stab_algorithm/stab_algorithm_config.h" type="1"/>
     <File name="algorithms/stab_algorithms/stab_algorithm.h" path="GFC/algorithms/stab_algorithm/stab_algorithm.h" type="1"/>
-    <File name="remote control" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_i2c.h" path="stm_lib/inc/stm32f10x_i2c.h" type="1"/>
-    <File name="stm_lib/src/stm32f10x_i2c.c" path="stm_lib/src/stm32f10x_i2c.c" type="1"/>
-    <File name="remote control/radio_channal.c" path="GFC/remote_control/radio_channal.c" type="1"/>
-    <File name="drivers/timer/timer.c" path="GFC/drivers/timer/timer.c" type="1"/>
-    <File name="drivers/easy_uart/easy_uart.c" path="GFC/drivers/easy_uart/easy_uart.c" type="1"/>
+    <File name="remote control" path="" type="2"/>
+    <File name="algorithms/altitude_algorithm" path="" type="2"/>
     <File name="drivers/i2c routines/I2CRoutines.h" path="GFC/drivers/i2c_routines/I2CRoutines.h" type="1"/>
     <File name="stm_lib/inc" path="" type="2"/>
     <File name="drivers/i2c routines" path="" type="2"/>
-    <File name="helpers" path="" type="2"/>
-    <File name="main.c" path="main.c" type="1"/>
-    <File name="remote control/radio_control.h" path="GFC/remote_control/radio_control.h" type="1"/>
-    <File name="sensors/bmp085/BMP085_low.h" path="GFC/sensors/BMP085/BMP085_low.h" type="1"/>
   </Files>
 </Project>

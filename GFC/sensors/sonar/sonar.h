@@ -2,7 +2,8 @@
 #define __SONAR_H__
 #include "stdint.h"
 
-void init_sonar();
-void sonar_update();
-uint16_t get_sonar_distanse();
+void Sonar_Init();
+void Sonar_Update();
+uint16_t Sonar_GetRawDistanse();
+void Sonar_GetProcessedData(int32_t * dist, int32_t * dist_velo);
 #endif

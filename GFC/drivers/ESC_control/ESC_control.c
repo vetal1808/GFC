@@ -32,7 +32,6 @@ void ESC_init()
 	 * TIM_Pulse/2 = pulse width (us)
 	 */
 
-
 	TIM_OCInitTypeDef outputChannelInit = {0,};
 	outputChannelInit.TIM_OCMode = TIM_OCMode_PWM1;
 	outputChannelInit.TIM_Pulse = min_pwm;
@@ -52,23 +51,10 @@ void ESC_init()
 	TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Enable);
 }
 
-void ESC_set_power(uint16_t * val)
+void ESC_setPower(uint16_t * val)
 {
 	TIM2->CCR1=val[0]+min_pwm;
 	TIM2->CCR2=val[1]+min_pwm;
 	TIM2->CCR3=val[2]+min_pwm;
 	TIM2->CCR4=val[3]+min_pwm;
 }
-void update_rotors(Rotor4 * thrust4, uint8_t rotor_mask){
-	if(!(rotor_mask & (1<<0)))
-		thrust4->LFW = 0;
-	if(!(rotor_mask & (1<<1)))
-		thrust4->RFC = 0;
-	if(!(rotor_mask & (1<<2)))
-		thrust4->RBW = 0;
-	if(!(rotor_mask & (1<<3)))
-		thrust4->LBC = 0;
-	uint16_t tmp[4] = {thrust4->LFW, thrust4->RFC, thrust4->RBW, thrust4->LBC};
-	ESC_set_power(tmp);
-}
-

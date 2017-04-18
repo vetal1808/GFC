@@ -1,26 +1,28 @@
-#ifndef BMP085_HIGH_H_
-#define BMP085_HIGH_H_
+#ifndef __BMP085_HIGH_H__
+#define __BMP085_HIGH_H__
 
-#include "BMP085_low.h"
+#include <stdint.h>
 
-#define use_fir_filter
+#define BMP085_ULTRALOWPOWER 0
+#define BMP085_STANDARD      1
+#define BMP085_HIGHRES       2
+#define BMP085_ULTRAHIGHRES  3
+
+uint8_t BMP085_begin(uint8_t mode);  // by default go highres
 
 void BMP085_readRawTemperature_reqest();
 uint16_t BMP085_readRawTemperature_ask();
 void BMP085_readRawPressure_reqest();
 uint32_t BMP085_readRawPressure_ask();
 
-int32_t BMP085_CalculatePressure(uint16_t UT, uint32_t UP);
-float BMP085_CalculateAltitude(float pressure) ;
+int32_t BMP085_calculatePressure(uint16_t UT, uint32_t UP);
+float BMP085_calculateAltitude(float pressure) ;
 
-
-
-void BMP085_update();
-int32_t BMP085_get_altitude();
-uint32_t BMP085_measuring_pressure();
-void BMP085_set_zero_pressure(uint32_t z);
-
-void BMP085_get_data(int32_t * altitude, int32_t * velocity);
+uint32_t BMP085_measurePressure();
+void BMP085_setZeroPressure(uint32_t pressure);
+void BMP085_setZeroPressure2(uint32_t current_pressure, uint32_t altitude);
 void BMP085_update();
 
+void BMP085_getProcessesData(int32_t * altitude, int32_t * velocity);
+int32_t BMP085_getRawAltitude();
 #endif

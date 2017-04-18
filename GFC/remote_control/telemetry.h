@@ -1,7 +1,7 @@
 #ifndef TELEMETRY_H_
 #define TELEMETRY_H_
 
-#include "radio_channal.h"
+#include "radio_channel.h"
 #include "helpers.h"
 #include "quaternion.h"
 
@@ -32,7 +32,27 @@
 #define ALTITUDE 13
 #define ALTITUDE_VELOCITY 14
 
-#define RESERVED_CHANNAL0 15
+#define SONAR_DIST 15
+#define SONAR_VELOCITY 16
+
+#define COORDINATE_PIDS
+
+#define COORDINATE_X_PID	(COORDINATE_PIDS)
+#define PROP_COORDINATE_X	(COORDINATE_X_PID)
+#define INTEGR_COORDINATE_X	(COORDINATE_X_PID + 1)
+#define DIFF_COORDINATE_X	(COORDINATE_X_PID + 2)
+
+#define COORDINATE_Y_PID	(COORDINATE_PIDS + 3)
+#define PROP_COORDINATE_Y	(COORDINATE_Y_PID)
+#define INTEGR_COORDINATE_Y	(COORDINATE_Y_PID + 1)
+#define DIFF_COORDINATE_Y	(COORDINATE_Y_PID + 2)
+
+#define COORDINATE_Z_PID	(COORDINATE_PIDS + 6)
+#define PROP_COORDINATE_Z	(COORDINATE_Z_PID)
+#define INTEGR_COORDINATE_Z	(COORDINATE_Z_PID + 1)
+#define DIFF_COORDINATE_Z	(COORDINATE_Z_PID + 2)
+
+#define RESERVED_CHANNAL0 100
 #define RESERVED_CHANNAL1 (RESERVED_CHANNAL0 + 1)
 #define RESERVED_CHANNAL2 (RESERVED_CHANNAL0 + 2)
 #define RESERVED_CHANNAL3 (RESERVED_CHANNAL0 + 3)
@@ -40,8 +60,16 @@
 #define RESERVED_CHANNAL5 (RESERVED_CHANNAL0 + 5)
 
 
-void telemetry_update();
-void load_axis_errors(Quaternion * quaternion);
-void load_euclid_angles(Quaternion * quaternion);
-void load_euclid_angles_derivative(Quaternion * q, Vector3 local_rotation);
+#define GPS_LONGITUDE
+#define GPS_LATITUDE
+#define GPS_ACURACCY
+#define GPS_SATELLITE_NUM
+
+#define RELATIVE_X_POS
+#define RELATIVE_Y_POS
+
+
+void Telemetry_sendToPilot();
+#define Telemetry_copyData (x,y,z) (Telemetry_copyData(x,y,z))
+
 #endif

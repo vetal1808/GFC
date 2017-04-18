@@ -9,7 +9,7 @@
 // 29/09/2011	SOH Madgwick    Initial release
 // 02/10/2011	SOH Madgwick	Optimised for reduced CPU load
 // 19/02/2012	SOH Madgwick	Magnetometer measurement is normalised
-//
+// 14/04/2017	vetal1808		Rebuild for own purposes
 //=====================================================================================================
 
 //---------------------------------------------------------------------------------------------------
@@ -22,7 +22,7 @@
 //---------------------------------------------------------------------------------------------------
 // Definitions
 
-#define sampleTime update_period_in_sec
+#define UPDATE_PERIOD UPDATE_PERIOD_IN_SEC
 #define beta		0.1f		// 2 * proportional gain
 
 //---------------------------------------------------------------------------------------------------
@@ -123,10 +123,10 @@ void MadgwickAHRSupdate(float gx, float gy, float gz, float ax, float ay, float 
 	}
 
 	// Integrate rate of change of quaternion to yield quaternion
-	q.q0 += qDot1 * sampleTime;
-	q.q1 += qDot2 * sampleTime;
-	q.q2 += qDot3 * sampleTime;
-	q.q3 += qDot4 * sampleTime;
+	q.q0 += qDot1 * UPDATE_PERIOD;
+	q.q1 += qDot2 * UPDATE_PERIOD;
+	q.q2 += qDot3 * UPDATE_PERIOD;
+	q.q3 += qDot4 * UPDATE_PERIOD;
 
 	// Normalise quaternion
 	recipNorm = invSqrt(q.q0 * q.q0 + q.q1 * q.q1 + q.q2 * q.q2 + q.q3 * q.q3);
@@ -194,10 +194,10 @@ void MadgwickAHRSupdateIMU(float gx, float gy, float gz, float ax, float ay, flo
 	}
 
 	// Integrate rate of change of quaternion to yield quaternion
-	q.q0 += qDot1 * sampleTime;
-	q.q1 += qDot2 * sampleTime;
-	q.q2 += qDot3 * sampleTime;
-	q.q3 += qDot4 * sampleTime;
+	q.q0 += qDot1 * UPDATE_PERIOD;
+	q.q1 += qDot2 * UPDATE_PERIOD;
+	q.q2 += qDot3 * UPDATE_PERIOD;
+	q.q3 += qDot4 * UPDATE_PERIOD;
 
 	// Normalise quaternion
 	recipNorm = invSqrt(q.q0 * q.q0 + q.q1 * q.q1 + q.q2 * q.q2 + q.q3 * q.q3);
@@ -208,14 +208,12 @@ void MadgwickAHRSupdateIMU(float gx, float gy, float gz, float ax, float ay, flo
 }
 
 
-Quaternion GetMadgwickAHRSQuaternion(){
-	return q;
+void GetMadgwickAHRSQuaternion(Quaternion *quaternion){
+	*quaternion = q;
 }
 
-Quaternion GetOffsetMadgwickAHRSQuaternion(){
-	Quaternion result;
-	quaternionMultiplication(&q, &offset_q, &result);
-	return result;
+void GetOffsetedMadgwickAHRSQuaternion(Quaternion *offseted_quaternion){
+	quaternionMultiplication(&q, &offset_q, &offseted_quaternion);
 }
 
 

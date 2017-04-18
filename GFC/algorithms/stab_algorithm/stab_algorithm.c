@@ -5,6 +5,7 @@
  *      Author: vetal
  */
 #include "stab_algorithm.h"
+#include "stab_algorithm_config.h"
 #include "telemetry.h"
 #include "q_config.h"
 #include "PID.h"
@@ -31,7 +32,6 @@ void angle_stab_algorithm2(Quaternion * quaternion, Vector3 * gyro, uint8_t inte
 /*
  function calc_rotor4_thrust calculate thrust for X-copter by 3 torque of axis and thrust
 */
-
 void calc_rotor4_thrust(Vector3 torque_of_axis, int16_t average_thrust, Rotor4 * rotors4_thrust){
 	rotors4_thrust->LFW = (uint16_t)(average_thrust - (int16_t)((torque_of_axis.x + torque_of_axis.y + torque_of_axis.z)));
 	rotors4_thrust->RFC = (uint16_t)(average_thrust - (int16_t)((torque_of_axis.x - torque_of_axis.y - torque_of_axis.z)));
@@ -85,7 +85,7 @@ void angle_stab_algorithm2(Quaternion * quaternion, Vector3 * gyro, uint8_t inte
 
 
 
-	float d2_gain = (float)(-get_rx_channal(4));
+	float d2_gain = (float)(-RadioChannel_getRxChannal(4));
 	Vector3 d2_summand;
 	torque->x = PIDD2(quaternion->q1, gyro->x, gyro_derivate.x, d2_gain, &PIDs_array[pitch_PID],  integral_switcher, &d2_summand.x);
 	torque->y = PIDD2(quaternion->q2, gyro->y, gyro_derivate.y, d2_gain, &PIDs_array[roll_PID],  integral_switcher, &d2_summand.y);
@@ -94,7 +94,7 @@ void angle_stab_algorithm2(Quaternion * quaternion, Vector3 * gyro, uint8_t inte
 	tmp[0] = (int16_t)d2_summand.x;
 	tmp[1] = (int16_t)d2_summand.y;
 	tmp[2] = (int16_t)d2_summand.z;
-	set_tx_channals(tmp, RESERVED_CHANNAL3, 3);
+	RadioChannel_setTxChannals(tmp, RESERVED_CHANNAL3, 3);
 }
 
 void manual_stab(Quaternion * real_quaternion, Vector3 * gyro, Quaternion * RC_quaternion, Vector3 * RC_gyro, uint16_t thrust, Rotor4 * rotor4_thrust){
@@ -144,13 +144,14 @@ void update_PID_config(uint16_t raw){
 void defaultPIDinit(){
 	uint8_t i = 0;
 	for (i = 0; i < 3; i++) {
-		PIDs_array[i].config_array[0] = 160.0f;
-		PIDs_array[i].config_array[1] = 5.0f;
-		PIDs_array[i].config_array[2] = 50.0f;
-		PIDs_array[i].config_array[3] = 100.0f;
-		PIDs_array[i].config_array[4] = 40.0f;
-		PIDs_array[i].config_array[5] = 100.0f;
+		PIDs_array[i].config_array[0] = PID_ANGLE_P_GAIN_DEFAULT;
+		PIDs_array[i].config_array[1] = PID_ANGLE_I_GAIN_DEFAULT;
+		PIDs_array[i].config_array[2] = PID_ANGLE_D_GAIN_DEFAULT;
+		PIDs_array[i].config_array[3] = PID_ANGLE_P_LIMIT_DEFAULT;
+		PIDs_array[i].config_array[4] = PID_ANGLE_I_LIMIT_DEFAULT;
+		PIDs_array[i].config_array[5] = PID_ANGLE_D_LIMIT_DEFAULT;
 		PIDs_array[i].integral_sum = 0.0f;
+
 	}
 };
 void getAnglesPidSummands(int16_t * array){
@@ -161,5 +162,9 @@ void getAnglesPidSummands(int16_t * array){
 void loadPidsTelemetry(){
 	int16_t tmp[9];
 	getAnglesPidSummands(tmp);
-	set_tx_channals(tmp, ANGLES_PIDS, 9);
+	RadioChannel_setTxChannals(tmp, ANGLES_PIDS, 9);
 }
+void getRawPidTelemetry(uint8_t *p){
+	getAnglesPidSummands(p);
+}
+

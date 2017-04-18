@@ -1,7 +1,9 @@
 #include "mpu6050.h"
 
 uint8_t mpu6050_dev_addr;
-int16_t gx0=0, gy0=0, gz0=0;
+int16_t gx_offset = 0;
+int16_t gy_offset = 0;
+int16_t gz_offset = 0;
 
 float gyro_ratio = gyro250_to_radians;
 float accel_ratio = int2G_to_float;
@@ -18,7 +20,7 @@ void MPU6050_initialize()
 
 void MPU6050_setClockSource(uint8_t source)
 {
-	I2C1_write_bits(mpu6050_dev_addr,
+	I2C1_WriteBits(mpu6050_dev_addr,
                   MPU6050_RA_PWR_MGMT_1,
                   MPU6050_PWR1_CLKSEL_BIT,
                   MPU6050_PWR1_CLKSEL_LENGTH,
@@ -28,7 +30,7 @@ void MPU6050_setClockSource(uint8_t source)
 void MPU6050_setFullScaleGyroRange(uint8_t range)
 {
 	gyro_ratio = gyro250_to_radians * (range + 1);
-	I2C1_write_bits(mpu6050_dev_addr,
+	I2C1_WriteBits(mpu6050_dev_addr,
                   MPU6050_RA_GYRO_CONFIG,
                   MPU6050_GCONFIG_FS_SEL_BIT,
                   MPU6050_GCONFIG_FS_SEL_LENGTH,
@@ -38,7 +40,7 @@ void MPU6050_setFullScaleGyroRange(uint8_t range)
 void MPU6050_setFullScaleAccelRange(uint8_t range)
 {
 	accel_ratio = int2G_to_float * (range + 1);
-	I2C1_write_bits(mpu6050_dev_addr,
+	I2C1_WriteBits(mpu6050_dev_addr,
                   MPU6050_RA_ACCEL_CONFIG,
                   MPU6050_ACONFIG_AFS_SEL_BIT,
                   MPU6050_ACONFIG_AFS_SEL_LENGTH,
@@ -47,7 +49,7 @@ void MPU6050_setFullScaleAccelRange(uint8_t range)
 
 void MPU6050_setSleepEnabled(uint8_t enabled)
 {
-	I2C1_write_bit(mpu6050_dev_addr,
+	I2C1_WriteBit(mpu6050_dev_addr,
                  MPU6050_RA_PWR_MGMT_1,
                  MPU6050_PWR1_SLEEP_BIT,
                  enabled);
@@ -59,8 +61,8 @@ void MPU6050_setSleepEnabled(uint8_t enabled)
  */
 void MPU6050_setBypassMode()
 {
-    I2C1_read_bytes(mpu6050_dev_addr, MPU6050_RA_INT_PIN_CFG, 1, (uint8_t *)0x02);
-    I2C1_read_bytes(mpu6050_dev_addr, MPU6050_RA_USER_CTRL, 1, (uint8_t *)0x00);
+    I2C1_ReadBytes(mpu6050_dev_addr, MPU6050_RA_INT_PIN_CFG, 1, (uint8_t *)0x02);
+    I2C1_ReadBytes(mpu6050_dev_addr, MPU6050_RA_USER_CTRL, 1, (uint8_t *)0x00);
 }
 
 /*          |   ACCELEROMETER    |           GYROSCOPE
@@ -78,7 +80,7 @@ void MPU6050_setBypassMode()
 */
 void MPU6050_setDLPFMode(uint8_t mode)
 {
-	I2C1_write_bits(mpu6050_dev_addr,
+	I2C1_WriteBits(mpu6050_dev_addr,
                   MPU6050_RA_CONFIG,
                   MPU6050_CFG_DLPF_CFG_BIT,
                   MPU6050_CFG_DLPF_CFG_LENGTH,
@@ -94,7 +96,7 @@ inline void MPU6050_getMotion6(int16_t* ax,
 {
 
     uint8_t rx_buf[14];
-    Status _status = I2C1_read_bytes(mpu6050_dev_addr, MPU6050_RA_ACCEL_XOUT_H, 14, rx_buf);
+    Status _status = I2C1_ReadBytes(mpu6050_dev_addr, MPU6050_RA_ACCEL_XOUT_H, 14, rx_buf);
 
     *ax = (((int16_t)rx_buf[0]) << 8) | rx_buf[1];
     *ay = (((int16_t)rx_buf[2]) << 8) | rx_buf[3];
@@ -103,12 +105,12 @@ inline void MPU6050_getMotion6(int16_t* ax,
     *gy = (((int16_t)rx_buf[10]) << 8) | rx_buf[11];
     *gz = (((int16_t)rx_buf[12]) << 8) | rx_buf[13];
 
-	*gx -= gx0;
-	*gy -= gy0;
-	*gz -= gz0;
+	*gx -= gx_offset;
+	*gy -= gy_offset;
+	*gz -= gz_offset;
 
 }
-void MPU6050_calibration(uint16_t num_of_samples){
+void MPU6050_accumulateGyroOffset(uint16_t num_of_samples){
 	int i =0;
 	int16_t tmp[6];
 	int32_t x = 0,y = 0,z = 0;
@@ -120,9 +122,9 @@ void MPU6050_calibration(uint16_t num_of_samples){
 		z += tmp[5];
 	}
 
-	gx0 = x / num_of_samples;
-	gy0 = y / num_of_samples;
-	gz0 = z / num_of_samples;
+	gx_offset = x / num_of_samples;
+	gy_offset = y / num_of_samples;
+	gz_offset = z / num_of_samples;
 }
 
 void MPU6050_getFloatMotion6(Vector3 * acc, Vector3 * gyro){
@@ -164,28 +166,30 @@ void MPU6050_getFloatMotion6(Vector3 * acc, Vector3 * gyro){
 
 void MPU6050_setAccelFIFOEnabled(uint8_t flag){
 
-	I2C1_write_bit(mpu6050_dev_addr, MPU6050_RA_FIFO_EN, MPU6050_ACCEL_FIFO_EN_BIT, flag);
+	I2C1_WriteBit(mpu6050_dev_addr, MPU6050_RA_FIFO_EN, MPU6050_ACCEL_FIFO_EN_BIT, flag);
 
 }
 
 void MPU6050_setFIFOEnabled(uint8_t enabled) {
-	I2C1_write_bit(mpu6050_dev_addr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_FIFO_EN_BIT, enabled);
+	I2C1_WriteBit(mpu6050_dev_addr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_FIFO_EN_BIT, enabled);
 }
 uint16_t MPU6050_getFIFOCount() {
     uint8_t rx_buf[2];
-    I2C1_read_bytes(mpu6050_dev_addr, MPU6050_RA_FIFO_COUNTH, 2, rx_buf);
+    I2C1_ReadBytes(mpu6050_dev_addr, MPU6050_RA_FIFO_COUNTH, 2, rx_buf);
     return (((uint16_t)rx_buf[0]) << 8) | rx_buf[1];
 }
 void MPU6050_getFIFOBytes(uint8_t *data, uint8_t length) {
 
-    I2C1_read_bytes(mpu6050_dev_addr, MPU6050_RA_FIFO_R_W, length, data);
+    I2C1_ReadBytes(mpu6050_dev_addr, MPU6050_RA_FIFO_R_W, length, data);
 }
 void MPU6050_setGyrosFIFOEnabled(uint8_t enabled) {
-	I2C1_write_bits(mpu6050_dev_addr, MPU6050_RA_FIFO_EN, MPU6050_XG_FIFO_EN_BIT, 3, enabled);
+	I2C1_WriteBits(mpu6050_dev_addr, MPU6050_RA_FIFO_EN, MPU6050_XG_FIFO_EN_BIT, 3, enabled);
 
 }
 
 void MPU6050_setSampleRateDiv(uint8_t data) {
-    data--;
-	I2C1_write_bytes(mpu6050_dev_addr, MPU6050_RA_SMPLRT_DIV, 1, &data);
+    if (data != 0) {
+		data--;
+	}
+	I2C1_WriteBytes(mpu6050_dev_addr, MPU6050_RA_SMPLRT_DIV, 1, &data);
 }
