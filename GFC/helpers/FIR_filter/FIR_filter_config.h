@@ -9,4 +9,12 @@ const int32_t FIR_coef[32] = {
     };
 uint8_t len = 32;
 uint32_t final_divider = 262144;
+
+const int32_t FIR_coef2[] = {
+		1667,	-2644,	4321,	27166,
+        4321,	-2644,	1667,	-1087
+   };
+uint8_t len2 = 8;
+uint32_t final_divider2 = 32768;
+
 #endif

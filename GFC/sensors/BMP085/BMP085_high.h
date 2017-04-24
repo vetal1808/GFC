@@ -16,11 +16,13 @@ void BMP085_readRawPressure_reqest();
 uint32_t BMP085_readRawPressure_ask();
 
 int32_t BMP085_calculatePressure(uint16_t UT, uint32_t UP);
+int16_t BMP085_getTemperature(uint16_t UT);
 float BMP085_calculateAltitude(float pressure) ;
 
 uint32_t BMP085_measurePressure();
 void BMP085_setZeroPressure(uint32_t pressure);
-void BMP085_setZeroPressure2(uint32_t current_pressure, uint32_t altitude);
+void BMP085_setZeroPressure2(uint32_t altitude_shift);
+void BMP085_setZeroPressure3(uint32_t current_pressuer, uint32_t current_altitude);
 void BMP085_update();
 
 void BMP085_getProcessesData(int32_t * altitude, int32_t * velocity);

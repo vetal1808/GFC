@@ -1,7 +1,7 @@
 #include "timer.h"
 
 volatile uint16_t timer_overflow = 0;
-static uint32_t sync_time = 0;
+uint32_t sync_time = 0;
 
 void TIM4_IRQHandler(void)
 {

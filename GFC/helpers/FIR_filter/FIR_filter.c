@@ -22,10 +22,21 @@ void FIR_filter_int32_configue2(FIR_filter_int32_struct * filter_struct,
 }
 void FIR_filter_int32_configue(FIR_filter_int32_struct * filter_struct, int32_t * _seq, uint8_t asset){
 	//this is temporary solution for one asset of configures
-	filter_struct->coef = FIR_coef;
 	filter_struct->seq = _seq;
-	filter_struct->len = len;
-	filter_struct->final_divider = final_divider;
+	switch (asset) {
+		case 0:
+			filter_struct->coef = FIR_coef;
+			filter_struct->len = len;
+			filter_struct->final_divider = final_divider;
+			break;
+		case 1:
+			filter_struct->coef = FIR_coef2;
+			filter_struct->len = len2;
+			filter_struct->final_divider = final_divider2;
+		default:
+			break;
+	}
+
 }
 float FIR_filter_float(float new_value, FIR_filter_float_struct * filter) {
 	uint8_t i;

@@ -7,8 +7,11 @@
 #define POSTPOCESSING
 
 float BMP_zero_press = 100000;
-volatile int32_t BMP_raw_altitude; 
-volatile int32_t BMP_altitude, BMP_velocity;
+
+uint32_t BMP_raw_pressure;
+uint16_t BMP_raw_temperature;
+int32_t BMP_raw_altitude;
+int32_t BMP_altitude, BMP_velocity;
 
 #ifdef POSTPOCESSING
 
@@ -105,7 +108,10 @@ int32_t BMP085_calculatePressure(uint16_t UT, uint32_t UP){
 	  //return pressure in Pa
 	  return p;
 }
-
+int16_t BMP085_getTemperature(uint16_t UT) {
+	int32_t B5 = BMP085_computeB5(UT);
+	return (B5 + 8) >> 4;
+}
 float BMP085_calculateAltitude(float pressure){
 	//return altitude in millimeters
 	return 44330000.0 * (1.0 - pow(pressure /BMP_zero_press,0.1903));
@@ -116,7 +122,9 @@ void BMP085_update(){
     const uint8_t temp_meas_skip = 4;
 	static uint8_t BMP_state = 0, temp_meas_skip_counter = 0;
 	static uint32_t sync_time;
-	static uint16_t raw_temp;
+	static uint16_t UT; // uncompensated temperature value
+	static uint32_t UP;	// uncompensated pressure value
+
 	switch (BMP_state){
 		case 0 :
         {
@@ -128,8 +136,9 @@ void BMP085_update(){
 		case 1 :
         {
 			if(TIMER_micros() - sync_time > 4499){
-				raw_temp = BMP085_readRawTemperature_ask();
+				UT = BMP085_readRawTemperature_ask();
 				BMP085_readRawPressure_reqest();
+				BMP_raw_temperature = BMP085_getTemperature(UT);
 				BMP_state++;
 				sync_time = TIMER_micros();
 			}
@@ -138,8 +147,9 @@ void BMP085_update(){
 		case 2 :
         {
 			if(TIMER_micros() - sync_time > 25499){
-				uint32_t raw_press = BMP085_readRawPressure_ask();
-                BMP_raw_altitude = (int32_t) BMP085_calculateAltitude((float)BMP085_calculatePressure(raw_temp,raw_press));
+				UP = BMP085_readRawPressure_ask();
+				BMP_raw_pressure = BMP085_calculatePressure(UT,UP);
+                BMP_raw_altitude = (int32_t) BMP085_calculateAltitude((float)BMP_raw_pressure);
                 #ifdef POSTPOCESSING
                 BMP085_postprocessing();
                 #endif 
@@ -179,12 +189,22 @@ uint32_t BMP085_measurePressure(){
 void BMP085_setZeroPressure(uint32_t pressure){
 	BMP_zero_press = pressure;
 }
-void BMP085_setZeroPressure2(uint32_t current_pressure, uint32_t altitude){
+/*
+ * set zero pressure using current pressure and current altitude from other source
+ */
+void BMP085_setZeroPressure2(uint32_t current_altitude){
 	//this algorithm work work approximately
-	const float press_to_dist = 0.01187f;
-	int16_t pressure_offset = (int16_t)(press_to_dist*(float)altitude);
-	BMP_zero_press = current_pressure - pressure_offset;
+	const float press_to_dist = 0.01187f; // pascal per millimeter
+	int16_t pressure_offset = (int16_t)(press_to_dist*(float)current_altitude);
+	BMP_zero_press = BMP_raw_pressure + pressure_offset;
 }
+void BMP085_setZeroPressure3(uint32_t current_pressuer, uint32_t current_altitude){
+	//this algorithm work work approximately
+	const float press_to_dist = 0.01187f; // pascal per millimeter
+	int16_t pressure_offset = (int16_t)(press_to_dist*(float)current_altitude);
+	BMP_zero_press = current_pressuer + pressure_offset;
+}
+
 void BMP085_getProcessesData(int32_t *altitude, int32_t *velocity){
 	*altitude = BMP_altitude;
 	*velocity = BMP_velocity;

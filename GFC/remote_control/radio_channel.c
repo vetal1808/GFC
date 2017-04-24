@@ -1,9 +1,9 @@
 #include "radio_channel.h"
 
-volatile int16_t rx_channal[RX_CHANNAL_NUM];
-volatile int16_t tx_channal[TX_CHANNAL_NUM];
-uint64_t rx_fresh = 0;
-uint64_t tx_mask = 0;
+static volatile int16_t rx_channal[RX_CHANNAL_NUM];
+static volatile int16_t tx_channal[TX_CHANNAL_NUM];
+static uint64_t rx_fresh = 0;
+static uint64_t tx_mask = 0;
 
 void RadioChannel_initialization(){
 	USART_init(RC_USART, RC_USART_BAUDRATE);

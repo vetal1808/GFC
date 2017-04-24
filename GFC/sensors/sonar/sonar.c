@@ -15,12 +15,11 @@
 #define TRIG_PIN GPIO_Pin_12
 
 #define RESCAN_PERIOD_US 50000
-#define RESCAN_FRQ 1000000/50000
+#define RESCAN_FRQ 1000000/RESCAN_PERIOD_US
 #define POSTPOCESSING
 
 #ifdef POSTPOCESSING
 	#include "FIR_filter.h"
-	FIR_filter_int32_struct FIR_disatanse;
 	FIR_filter_int32_struct FIR_disatanse_velocity;
 
 	void Sonar_Postprocessing();
@@ -114,16 +113,15 @@ void Sonar_GetProcessedData(int32_t * dist, int32_t * dist_velo){
 	void Sonar_Postprocessing(){
 		if (new_ready == 1) {
 			new_ready = 0;
-			int16_t dist = Sonar_GetRawDistanse();
-			int32_t diff = (dist - (FIR_disatanse.seq[0]))*RESCAN_FRQ;
-			sonar_distanse = FIR_filter_int32(dist, &FIR_disatanse);
-			sonar_velocity = FIR_filter_int32(diff, &FIR_disatanse_velocity);
+			int16_t sonar_dist_next = Sonar_GetRawDistanse();
+			int32_t diff = (sonar_dist_next - sonar_distanse)*RESCAN_FRQ;
+			sonar_distanse = sonar_dist_next;
+			sonar_velocity = diff;
+			//sonar_velocity = FIR_filter_int32(diff, &FIR_disatanse_velocity);
 		}
 	}
 	void Sonar_Postprocessing_init(){
-		static int32_t disatanse_seq[32];
 		static int32_t disatanse_velo_seq[32];
-		FIR_filter_int32_configue(&FIR_disatanse, disatanse_seq, 0);
-		FIR_filter_int32_configue(&FIR_disatanse_velocity, disatanse_velo_seq, 0);
+		FIR_filter_int32_configue(&FIR_disatanse_velocity, disatanse_velo_seq, 1);
 	}
 #endif

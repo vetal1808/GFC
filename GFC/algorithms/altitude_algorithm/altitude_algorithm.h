@@ -2,9 +2,10 @@
 #define __ALTITUDE_ALORITHM_H__
 #include "types.h"
 
-void altitudeSensorInit();
-void altitudeAlgorithmUpdate(Vector3 global_accel);
-void getVerticalState(int32_t * altitude, int32_t * vertical_velocity);
+void Altitude_Init();
+void Altitude_AlgorithmUpdate(float accel_z);
+void Altitude_GetVerticalState(float * _altitude, float * _vertical_velocity, float * _altitude_acceleration);
+void Altitude_GetVerticalState1(float * _altitude, float * _vertical_velocity, float * _altitude_acceleration);
 uint8_t Altitude_GetCurrentSensor();
 
 #endif

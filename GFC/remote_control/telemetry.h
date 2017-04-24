@@ -70,6 +70,6 @@
 
 
 void Telemetry_sendToPilot();
-#define Telemetry_copyData (x,y,z) (Telemetry_copyData(x,y,z))
+
 
 #endif

@@ -213,7 +213,7 @@ void GetMadgwickAHRSQuaternion(Quaternion *quaternion){
 }
 
 void GetOffsetedMadgwickAHRSQuaternion(Quaternion *offseted_quaternion){
-	quaternionMultiplication(&q, &offset_q, &offseted_quaternion);
+	quaternionMultiplication(&q, &offset_q, offseted_quaternion);
 }
 
 

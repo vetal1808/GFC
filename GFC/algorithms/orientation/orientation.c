@@ -1,4 +1,8 @@
 #include "orientation.h"
+#include "mpu6050.h"
+#include "HMC5883L.h"
+#include "MadgwickAHRS.h"
+
 //variables definition
 Vector3 global_accel;
 Vector3 local_gyro;
@@ -20,7 +24,7 @@ void Orientation_InitSensors(uint8_t _use_compass){
 	MPU6050_setFullScaleAccelRange(MPU6050_ACCEL_FS_2);
 
 	int delay_var = 0;
-	for (delay_var = 0; delay_var < 20000000; ++delay_var);
+	for (delay_var = 0; delay_var < 2000000; ++delay_var);
 
 	MPU6050_accumulateGyroOffset(3000);
 	MPU6050_setSampleRateDiv(3);
@@ -45,6 +49,10 @@ void Orientation_Update (){
 		MadgwickAHRSupdateIMU(local_gyro.x, local_gyro.y, local_gyro.z,
 								local_accel.x, local_accel.y, local_accel.z);
 	}
+	Quaternion global_quaternion;
+	GetOffsetedMadgwickAHRSQuaternion(&global_quaternion);
+	global_accel = local_accel;
+	rotateVector3ByQuatern(&global_quaternion, &global_accel);
 
 };
 void Orientation_getGlobalAccel(Vector3 *_global_accel){
@@ -52,4 +60,7 @@ void Orientation_getGlobalAccel(Vector3 *_global_accel){
 }
 void Orientation_getLocalGyro(Vector3 *_local_gyro){
 	*_local_gyro = local_gyro;
+}
+void Orientation_getQuaternion(Quaternion * q){
+	GetOffsetedMadgwickAHRSQuaternion(q);
 }

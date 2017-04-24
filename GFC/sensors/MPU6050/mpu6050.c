@@ -5,8 +5,8 @@ int16_t gx_offset = 0;
 int16_t gy_offset = 0;
 int16_t gz_offset = 0;
 
-float gyro_ratio = gyro250_to_radians;
-float accel_ratio = int2G_to_float;
+float gyro_ratio = INT_GYRO250_TO_RADIANS;
+float accel_ratio = INT_2G_ACCEL_TO_MM_PER_SEC2;
 
 void MPU6050_initialize()
 {
@@ -29,7 +29,7 @@ void MPU6050_setClockSource(uint8_t source)
 
 void MPU6050_setFullScaleGyroRange(uint8_t range)
 {
-	gyro_ratio = gyro250_to_radians * (range + 1);
+	gyro_ratio = INT_GYRO250_TO_RADIANS * (range + 1);
 	I2C1_WriteBits(mpu6050_dev_addr,
                   MPU6050_RA_GYRO_CONFIG,
                   MPU6050_GCONFIG_FS_SEL_BIT,
@@ -39,7 +39,7 @@ void MPU6050_setFullScaleGyroRange(uint8_t range)
 
 void MPU6050_setFullScaleAccelRange(uint8_t range)
 {
-	accel_ratio = int2G_to_float * (range + 1);
+	accel_ratio = INT_2G_ACCEL_TO_MM_PER_SEC2 * (range + 1);
 	I2C1_WriteBits(mpu6050_dev_addr,
                   MPU6050_RA_ACCEL_CONFIG,
                   MPU6050_ACONFIG_AFS_SEL_BIT,

@@ -358,8 +358,8 @@
 #define MPU6050_DMP_MEMORY_BANK_SIZE    256
 #define MPU6050_DMP_MEMORY_CHUNK_SIZE   16
 
-#define gyro250_to_radians 1.795e-4
-#define int2G_to_float 0.059814453125 // convert 16bit int data 2G sens to sm/sec^2 in float
+#define INT_GYRO250_TO_RADIANS 1.795e-4
+#define INT_2G_ACCEL_TO_MM_PER_SEC2 0.59814453125 // convert 16bit int data 2G sens to mm/sec^2 in float
 
 void MPU6050_initialize();
 void MPU6050_setClockSource(uint8_t source);

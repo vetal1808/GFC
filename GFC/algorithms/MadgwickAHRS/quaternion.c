@@ -125,7 +125,7 @@ void computeEuclidAnglesDerivative(EuclidAngles * euclid_angles, Vector3 * local
 	tmp.z = (cos_yaw*sin_pitch*local_rotation->x+sin_yaw*sin_pitch*local_rotation->y - cos_pitch*local_rotation->z)*_1_cos_pitch;
 	*local_rotation = tmp;
 }
-void rotateVector3ByQuatern(Quaternion * q, Vector3 * return_vector)
+void rotateVector3ByQuatern(Quaternion * q, Vector3 * rotation_vector)
 {
 	float q1q1, q2q2, q3q3,
 	q0q1,q0q2,q0q3,
@@ -140,12 +140,12 @@ void rotateVector3ByQuatern(Quaternion * q, Vector3 * return_vector)
 	q2q2 = q->q2 * q->q2;
 	q2q3 = q->q2 * q->q3;
 	q3q3 = q->q3 * q->q3;
-	float _x = return_vector->x; 
-	float _y = return_vector->y; 
-	float _z = return_vector->z;
-	return_vector->x = 2.0f * ((0.5f - q2q2 - q3q3)*_x + (q1q2 - q0q3)*(_y)		 + (q1q3 + q0q2)*(_z));
-	return_vector->y = 2.0f * ((q1q2 + q0q3)*_x 		 + (0.5f - q1q1 - q3q3)*(_y) + (q2q3 - q0q1)*(_z));
-	return_vector->z = 2.0f * ((q1q3 - q0q2)*_x 		 + (q2q3 + q0q1)*(_y) 	     + (0.5f - q1q1 - q2q2)*(_z));
+	float _x = rotation_vector->x;
+	float _y = rotation_vector->y;
+	float _z = rotation_vector->z;
+	rotation_vector->x = 2.0f * ((0.5f - q2q2 - q3q3)*_x	+ (q1q2 - q0q3)*(_y)		+ (q1q3 + q0q2)*(_z));
+	rotation_vector->y = 2.0f * ((q1q2 + q0q3)*_x			+ (0.5f - q1q1 - q3q3)*(_y)	+ (q2q3 - q0q1)*(_z));
+	rotation_vector->z = 2.0f * ((q1q3 - q0q2)*_x			+ (q2q3 + q0q1)*(_y)		+ (0.5f - q1q1 - q2q2)*(_z));
 }
 float projectionOfNormalVectorToGlobalZ(Quaternion * q){
 	float q1q1 = q->q1 * q->q1;
