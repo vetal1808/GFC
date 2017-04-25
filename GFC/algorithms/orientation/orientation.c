@@ -36,12 +36,14 @@ void Orientation_Update (){
 	static uint8_t magnet_skip_counter = MAGNET_SKIP;
 	Vector3 local_accel;
 	getAccelAndGyro(&local_accel, &local_gyro);
-	if (magnet_skip_counter < MAGNET_SKIP) {
-		magnet_skip_counter++;
-	} else {
-		getMagnet(&local_magnet);
-	}
+
 	if (use_compass == 1) {
+		if (magnet_skip_counter < MAGNET_SKIP) {
+			magnet_skip_counter++;
+		} else {
+			magnet_skip_counter = 0;
+			getMagnet(&local_magnet);
+		}
 		MadgwickAHRSupdate(local_gyro.x, local_gyro.y, local_gyro.z,
 								local_accel.x, local_accel.y, local_accel.z,
 								local_magnet.x, local_magnet.y, local_magnet.z);

@@ -96,8 +96,8 @@
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
-    <File name="multicopter" path="" type="2"/>
     <File name="sensors/gps_parser/gps_parser.c" path="GFC/sensors/gps_parser/gps_parser.c" type="1"/>
+    <File name="multicopter" path="" type="2"/>
     <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="algorithms/stab_algorithms" path="" type="2"/>
     <File name="sensors/mpu6050/mpu6050.c" path="GFC/sensors/MPU6050/mpu6050.c" type="1"/>
@@ -114,8 +114,8 @@
     <File name="algorithms/MadgwickAHRS/MadgwickAHRS.c" path="GFC/algorithms/MadgwickAHRS/MadgwickAHRS.c" type="1"/>
     <File name="algorithms/MadgwickAHRS/quaternion.c" path="GFC/algorithms/MadgwickAHRS/quaternion.c" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
-    <File name="sensors/bmp085/BMP085_high.c" path="GFC/sensors/BMP085/BMP085_high.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
+    <File name="sensors/bmp085/BMP085_high.c" path="GFC/sensors/BMP085/BMP085_high.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
     <File name="helpers/AB_filter/AB_filter.h" path="GFC/helpers/AB_filter/AB_filter.h" type="1"/>
     <File name="algorithms/orientation" path="" type="2"/>

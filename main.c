@@ -2,7 +2,7 @@
 #include "math.h"
 #include "timer.h"
 #include "telemetry.h"
-
+#include "I2CRoutines.h"
 #include "algorithms/orientation/orientation.h"
 #include "algorithms/altitude_algorithm/altitude_algorithm.h"
 #include "algorithms/motor_algorithm/motor_algorithm.h"
@@ -26,7 +26,6 @@ int main(void)
 
     	//apply new algorithms settings
 
-    	int32_t lol = TIMER_micros();
     	//computing orientation
     	Orientation_Update();
 
@@ -48,7 +47,7 @@ int main(void)
     	RadioChannel_setTxChannal((int16_t)altitude, 6);
     	RadioChannel_setTxChannal((int16_t)altitude_velocity, 7);
     	RadioChannel_setTxChannal((int16_t)altitude_acceleration, 8);
-
+    	RadioChannel_setTxChannal((int16_t)TIMER_timeInLoop(), 12);
     	Telemetry_sendToPilot();
     	//computing main algorithm
 
@@ -57,8 +56,7 @@ int main(void)
     	//send telemetry
 
     	//waiting end of cycle
-    	int32_t azaz = TIMER_micros();
-    	int32_t a = lol - azaz;
+
     	TIMER_waitEndOfLoop(UPDATE_PERIOD_IN_US);
 
     }
@@ -73,5 +71,5 @@ void setup(){
 	Altitude_Init();
 	MOTORS_InitESC();
 	TIMER_startSynchronizationLoop();
-	RadioChannel_setTxMask(0b111111000);
+	RadioChannel_setTxMask(0b1000111111000);
 }

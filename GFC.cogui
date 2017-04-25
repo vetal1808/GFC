@@ -9,96 +9,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="3"/>
-<part id="2"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
-<part id="13"/>
-<part id="14"/>
-<part id="15"/>
-<part id="16"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/vetal/Documents/projects/GFC/main.c" title="main.c" tooltip="C:/Users/vetal/Documents/projects/GFC/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1010" selectionTopPixel="180"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="orientation.h" partName="orientation.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/orientation/orientation.h" title="orientation.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/orientation/orientation.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/orientation/orientation.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="394" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="types.h" partName="types.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/types.h" title="types.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/types.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/helpers/types/types.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="178" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="orientation.c" partName="orientation.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/orientation/orientation.c" title="orientation.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/orientation/orientation.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/orientation/orientation.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="911" selectionTopPixel="310"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="quaternion.h" partName="quaternion.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/quaternion.h" title="quaternion.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/quaternion.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/MadgwickAHRS/quaternion.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="71" selectionOffset="1116" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="MadgwickAHRS.c" partName="MadgwickAHRS.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.c" title="MadgwickAHRS.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8897" selectionTopPixel="2650"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="quaternion.c" partName="quaternion.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/quaternion.c" title="quaternion.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/quaternion.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/MadgwickAHRS/quaternion.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5501" selectionTopPixel="1630"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="fault_handlers.h" partName="fault_handlers.h" path="C:/Users/vetal/Documents/projects/GFC/fault_handlers.h" title="fault_handlers.h" tooltip="C:/Users/vetal/Documents/projects/GFC/fault_handlers.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/fault_handlers.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="274" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="MadgwickAHRS.h" partName="MadgwickAHRS.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.h" title="MadgwickAHRS.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="33" selectionOffset="1282" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="altitude_algorithm.c" partName="altitude_algorithm.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/altitude_algorithm/altitude_algorithm.c" title="altitude_algorithm.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/altitude_algorithm/altitude_algorithm.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1820" selectionTopPixel="535"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.c" partName="mpu6050.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/MPU6050/mpu6050.c" title="mpu6050.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/MPU6050/mpu6050.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/mpu6050/mpu6050.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1135" selectionTopPixel="135"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.h" partName="mpu6050.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/MPU6050/mpu6050.h" title="mpu6050.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/MPU6050/mpu6050.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/mpu6050/mpu6050.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="14277" selectionTopPixel="5140"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="altitude_algorithm.h" partName="altitude_algorithm.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/altitude_algorithm/altitude_algorithm.h" title="altitude_algorithm.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/altitude_algorithm/altitude_algorithm.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="177" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sonar.c" partName="sonar.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/sonar/sonar.c" title="sonar.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/sonar/sonar.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/sonar/sonar.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2422" selectionTopPixel="1395"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="BMP085_high.c" partName="BMP085_high.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/BMP085/BMP085_high.c" title="BMP085_high.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/BMP085/BMP085_high.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/bmp085/BMP085_high.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="23" selectionOffset="4553" selectionTopPixel="2430"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BMP085_high.h" partName="BMP085_high.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/BMP085/BMP085_high.h" title="BMP085_high.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/BMP085/BMP085_high.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/bmp085/BMP085_high.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="754" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="AB_filter.c" partName="AB_filter.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/helpers/AB_filter/AB_filter.c" title="AB_filter.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/helpers/AB_filter/AB_filter.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/helpers/AB_filter/AB_filter.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="23" selectionOffset="761" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
@@ -113,9 +27,11 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/GFC"/>
+<element path="/GFC/algorithms"/>
+<element path="/GFC/algorithms/orientation"/>
 </expanded>
 <selection>
-<element path="/GFC/fault_handlers.h"/>
+<element path="/GFC/algorithms/orientation/orientation.c"/>
 </selection>
 </viewState>
 </view>
@@ -141,7 +57,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.coocox.builder.perspective.CoBuilder">
+<perspectives activePart="org.coocox.builder.ui.views.ProjectView" activePerspective="org.coocox.builder.perspective.CoBuilder">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.coocox.builder.ui.PerspectiveCoBuilder" id="org.coocox.builder.perspective.CoBuilder" label="CooCox CoBuilder"/>
 <alwaysOnActionSet id="org.coocox.component.ui.actionSet"/>
@@ -330,7 +246,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1dd59ee" ratio="0.67180616" ratioLeft="610" ratioRight="298" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
 <page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
 <page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
@@ -352,216 +268,54 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/sensors/bmp085/BMP085_high.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/algorithms/MadgwickAHRS/quaternion.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/cmsis_boot/startup/startup_stm32f10x_md.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/sensors/sonar/sonar.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/sensors/bmp085/BMP085_high.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/helpers/AB_filter/AB_filter.c"/>
-</editors>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1193" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1115" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1527" y="0"/>
-</item>
-<item historyLabel="BMP085_high.c" index="3">
-<position info="not_deleted" x="4905" y="0"/>
-</item>
-<item historyLabel="BMP085_high.c" index="3">
-<position info="not_deleted" x="4933" y="0"/>
-</item>
-<item historyLabel="BMP085_high.c" index="3">
-<position info="not_deleted" x="4961" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1776" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="927" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1080" y="24"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="928" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="22" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="116" y="24"/>
-</item>
-<item historyLabel="quaternion.h" index="4">
-<position info="not_deleted" x="1116" y="71"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="116" y="24"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1080" y="24"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="140" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="644" y="13"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="101" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="644" y="13"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="101" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1851" y="25"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="188" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="2009" y="25"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="2009" y="25"/>
-</item>
-<item historyLabel="startup_stm32f10x_md.c" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="423" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="906" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1193" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1226" y="0"/>
-</item>
-<item historyLabel="sonar.c" index="6">
-<position info="not_deleted" x="2363" y="0"/>
-</item>
-<item historyLabel="sonar.c" index="6">
-<position info="not_deleted" x="2390" y="0"/>
-</item>
-<item historyLabel="sonar.c" index="6">
-<position info="not_deleted" x="2422" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1270" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="906" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1035" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="999" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1010" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1862" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.h" index="2">
-<position info="not_deleted" x="177" y="0"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1851" y="25"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position info="not_deleted" x="1748" y="0"/>
-</item>
-<item historyLabel="BMP085_high.c" index="3">
-<position info="not_deleted" x="4852" y="0"/>
-</item>
-<item historyLabel="BMP085_high.h" index="7">
-<position info="not_deleted" x="754" y="0"/>
-</item>
-<item historyLabel="BMP085_high.c" index="3">
-<position info="not_deleted" x="4841" y="23"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position/>
-</item>
-<item historyLabel="AB_filter.c" index="8">
-<position info="not_deleted" x="761" y="23"/>
-</item>
-<item historyLabel="altitude_algorithm.c" index="1">
-<position/>
-</item>
-<item active="true" historyLabel="BMP085_high.c" index="3">
-<position info="not_deleted" x="4553" y="23"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AB_filter.c" tooltip="GFC/helpers/AB_filter/AB_filter.c">
-<persistable path="/GFC/helpers/AB_filter/AB_filter.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="orientation.c" tooltip="GFC/algorithms/orientation/orientation.c">
+<persistable path="/GFC/algorithms/orientation/orientation.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BMP085_high.h" tooltip="GFC/sensors/bmp085/BMP085_high.h">
-<persistable path="/GFC/sensors/bmp085/BMP085_high.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="orientation.h" tooltip="GFC/algorithms/orientation/orientation.h">
+<persistable path="/GFC/algorithms/orientation/orientation.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BMP085_high.c" tooltip="GFC/sensors/bmp085/BMP085_high.c">
-<persistable path="/GFC/sensors/bmp085/BMP085_high.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HMC5883L.c" tooltip="GFC/sensors/hmc5883L/HMC5883L.c">
+<persistable path="/GFC/sensors/hmc5883L/HMC5883L.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altitude_algorithm.h" tooltip="GFC/algorithms/altitude_algorithm/altitude_algorithm.h">
-<persistable path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.h" tooltip="GFC/sensors/mpu6050/mpu6050.h">
-<persistable path="/GFC/sensors/mpu6050/mpu6050.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.c" tooltip="GFC/sensors/mpu6050/mpu6050.c">
-<persistable path="/GFC/sensors/mpu6050/mpu6050.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm3.h" tooltip="GFC/cmsis/core_cm3.h">
+<persistable path="/GFC/cmsis/core_cm3.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altitude_algorithm.c" tooltip="GFC/algorithms/altitude_algorithm/altitude_algorithm.c">
 <persistable path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f10x_md.c" tooltip="GFC/cmsis_boot/startup/startup_stm32f10x_md.c">
-<persistable path="/GFC/cmsis_boot/startup/startup_stm32f10x_md.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="q_config.h" tooltip="GFC/helpers/q_config.h">
+<persistable path="/GFC/helpers/q_config.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MadgwickAHRS.h" tooltip="GFC/algorithms/MadgwickAHRS/MadgwickAHRS.h">
-<persistable path="/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="radio_channel.h" tooltip="GFC/remote control/radio_channel.h">
+<persistable path="/GFC/remote control/radio_channel.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fault_handlers.h" tooltip="GFC/fault_handlers.h">
-<persistable path="/GFC/fault_handlers.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="easy_uart.c" tooltip="GFC/drivers/easy_uart/easy_uart.c">
+<persistable path="/GFC/drivers/easy_uart/easy_uart.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="quaternion.c" tooltip="GFC/algorithms/MadgwickAHRS/quaternion.c">
-<persistable path="/GFC/algorithms/MadgwickAHRS/quaternion.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="radio_channel.c" tooltip="GFC/remote control/radio_channel.c">
+<persistable path="/GFC/remote control/radio_channel.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MadgwickAHRS.c" tooltip="GFC/algorithms/MadgwickAHRS/MadgwickAHRS.c">
-<persistable path="/GFC/algorithms/MadgwickAHRS/MadgwickAHRS.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="timer.h" tooltip="GFC/drivers/timer/timer.h">
+<persistable path="/GFC/drivers/timer/timer.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="quaternion.h" tooltip="GFC/algorithms/MadgwickAHRS/quaternion.h">
-<persistable path="/GFC/algorithms/MadgwickAHRS/quaternion.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_rcc.h" tooltip="GFC/stm_lib/inc/stm32f10x_rcc.h">
+<persistable path="/GFC/stm_lib/inc/stm32f10x_rcc.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="orientation.c" tooltip="GFC/algorithms/orientation/orientation.c">
-<persistable path="/GFC/algorithms/orientation/orientation.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ESC_control.c" tooltip="GFC/drivers/ESC_control/ESC_control.c">
+<persistable path="/GFC/drivers/ESC_control/ESC_control.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ESC_control.h" tooltip="GFC/drivers/ESC_control/ESC_control.h">
+<persistable path="/GFC/drivers/ESC_control/ESC_control.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="motor_algorithm.c" tooltip="GFC/algorithms/motor_algorithm/motor_algorithm.c">
+<persistable path="/GFC/algorithms/motor_algorithm/motor_algorithm.c"/>
 </file>
 </mruList>
 </workbench>
