@@ -10,7 +10,8 @@
 #include "radio_control.h"
 #include "stab_algorithm.h"
 #include "types.h"
-#include "fault_handlers.h"
+#include "blinker.h"
+#include "ADC.h"
 void setup();
 
 int main(void)
@@ -21,7 +22,7 @@ int main(void)
 
     	//update radio data
 
-//    	RC_update();
+    	RC_update();
     	//update flight state
 
     	//apply new algorithms settings
@@ -47,7 +48,8 @@ int main(void)
     	RadioChannel_setTxChannal((int16_t)altitude, 6);
     	RadioChannel_setTxChannal((int16_t)altitude_velocity, 7);
     	RadioChannel_setTxChannal((int16_t)altitude_acceleration, 8);
-    	RadioChannel_setTxChannal((int16_t)TIMER_timeInLoop(), 12);
+    	RadioChannel_setTxChannal((int16_t)TIMER_timeInLoop(), LOOP_TIME);
+    	RadioChannel_setTxChannal((int16_t)Voltmeter_GetData(), BATTERY_VOLTAGE);
     	Telemetry_sendToPilot();
     	//computing main algorithm
 
@@ -56,7 +58,8 @@ int main(void)
     	//send telemetry
 
     	//waiting end of cycle
-
+    	Blinker_Update();
+    	Voltmeter_Update();
     	TIMER_waitEndOfLoop(UPDATE_PERIOD_IN_US);
 
     }
@@ -72,4 +75,6 @@ void setup(){
 	MOTORS_InitESC();
 	TIMER_startSynchronizationLoop();
 	RadioChannel_setTxMask(0b1000111111000);
+	Voltmeter_Init();
+	Blinker_Init(UPDATE_FRQ/4);
 }

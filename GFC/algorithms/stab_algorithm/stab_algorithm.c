@@ -164,7 +164,7 @@ void loadPidsTelemetry(){
 	getAnglesPidSummands(tmp);
 	RadioChannel_setTxChannals(tmp, ANGLES_PIDS, 9);
 }
-void getRawPidTelemetry(uint8_t *p){
+void getRawPidTelemetry(int16_t *p){
 	getAnglesPidSummands(p);
 }
 

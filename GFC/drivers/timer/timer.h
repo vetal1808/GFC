@@ -9,4 +9,5 @@ void TIMER_delayUs(uint32_t us);
 void TIMER_startSynchronizationLoop();
 void TIMER_waitEndOfLoop(uint32_t loop_time);
 uint32_t TIMER_timeInLoop();
+uint8_t TIMER_DidOvfHappend(uint8_t reset);
 #endif

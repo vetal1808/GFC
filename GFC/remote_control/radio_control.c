@@ -18,7 +18,7 @@ void RC_update(){
     if (RadioChannel_isRxChannalFresh(TX_MASK4)) {
     	int16_t tmp[4];
     	RadioChannel_getRxChannals(tmp, TX_MASK, 4);
-    	RadioChannel_setTxMask((uint64_t *)tmp);
+    	RadioChannel_setTxMask(*((uint64_t *)tmp));
 	}
 	//update lose connect state
 	if (RadioChannel_isRxChannalFresh(LOST_CONNECTION)) {

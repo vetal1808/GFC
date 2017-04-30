@@ -1,7 +1,7 @@
 #include "motor_algorithm.h"
 #include "ESC_control.h"
 
-uint8_t motor_mask = 0;
+static uint8_t motor_mask = 0;
 void MOTORS_InitESC(){
 	ESC_init();
 }

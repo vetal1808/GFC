@@ -9,13 +9,14 @@
 #define RC_PITCH		0
 #define RC_ROLL			1
 #define RC_YAW			2
-#define TRUST			3
+#define THRUST			3
 #define PID_CONFIG		4
 #define MOTOR_MASK		5
 #define LOST_CONNECTION	6
-#define COMMAND 		7
-#define FLIGHT_MODE 	9
-#define TX_MASK 		10
+#define FLIGHT_MODE 	7
+#define COMMAND 		8
+
+#define TX_MASK 		9
 #define TX_MASK2		(TX_MASK + 1)
 #define TX_MASK3		(TX_MASK + 2)
 #define TX_MASK4		(TX_MASK + 3)
