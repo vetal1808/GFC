@@ -99,8 +99,8 @@
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
     <File name="sensors/gps_parser/gps_parser.c" path="GFC/sensors/gps_parser/gps_parser.c" type="1"/>
     <File name="multicopter" path="" type="2"/>
-    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="algorithms/stab_algorithms" path="" type="2"/>
+    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="sensors/mpu6050/mpu6050.c" path="GFC/sensors/MPU6050/mpu6050.c" type="1"/>
     <File name="sensors/hmc5883L/HMC5883L.h" path="GFC/sensors/HMC5883L/HMC5883L.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
@@ -175,8 +175,8 @@
     <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
     <File name="sensors/mpu6050" path="" type="2"/>
     <File name="helpers/blinker/blinker.c" path="GFC/helpers/blinker/blinker.c" type="1"/>
-    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
     <File name="drivers/timer" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
     <File name="helpers/FIR_filter/FIR_filter.h" path="GFC/helpers/FIR_filter/FIR_filter.h" type="1"/>
     <File name="helpers/FIR_filter" path="" type="2"/>
     <File name="helpers/blinker/blinker.h" path="GFC/helpers/blinker/blinker.h" type="1"/>

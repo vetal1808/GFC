@@ -26,12 +26,12 @@
 	void Sonar_Postprocessing_init();
 #endif
 
-volatile uint32_t echo_delay = 0;
-volatile uint8_t new_ready = 0;
-uint32_t sync_time_ = 0;
-int32_t sonar_distanse;
-int32_t sonar_velocity;
-
+static volatile uint32_t echo_delay = 0;
+static volatile uint8_t new_ready = 0;
+static uint32_t sync_time = 0;
+static int32_t sonar_distanse;
+static int32_t sonar_velocity;
+static uint32_t sonar_valid_seq = 0xFFFFFFFF;
 
 void init_gpio();
 void init_external_interupt();
@@ -81,7 +81,7 @@ void EXTI15_10_IRQHandler(void)
 	if(EXTI->PR & ECHO_PIN)
 	{
 		new_ready = 1;
-		echo_delay = TIMER_micros() - sync_time_;
+		echo_delay = TIMER_micros() - sync_time;
 		EXTI->PR = ECHO_PIN; // reset interrupt
 	}
 }
@@ -93,9 +93,14 @@ void Sonar_StartMeasuring(){
 }
 
 void Sonar_Update(){
-	if ((TIMER_micros() - sync_time_)>=RESCAN_PERIOD_US) {
+
+	if ((TIMER_micros() - sync_time)>=RESCAN_PERIOD_US) {
+		if (new_ready == 0) {
+			sonar_valid_seq = sonar_valid_seq << 1;
+		}
+		new_ready = 0;
 		Sonar_StartMeasuring();
-		sync_time_ = TIMER_micros();
+		sync_time = TIMER_micros();
 	}
 #ifdef POSTPOCESSING
 	Sonar_Postprocessing();
@@ -109,11 +114,28 @@ void Sonar_GetProcessedData(int32_t * dist, int32_t * dist_velo){
 	*dist =  sonar_distanse;
 	*dist_velo =  sonar_velocity;
 }
+
+uint8_t Sonar_IsValid(){
+	uint8_t i, counter = 0;
+	for (i = 0; i < 20; ++i) {
+		if (sonar_valid_seq & (1<<i)) {
+			counter++;
+		}
+	}
+	return counter;
+}
+uint8_t Sonar_IsLastValid(){
+	return (uint8_t)sonar_valid_seq & 0b1;
+}
 #ifdef POSTPOCESSING
 	void Sonar_Postprocessing(){
 		if (new_ready == 1) {
-			new_ready = 0;
+			new_ready = 2;
 			int16_t sonar_dist_next = Sonar_GetRawDistanse();
+			//if dist more then 4m sonar - data is not valid
+			sonar_valid_seq = sonar_valid_seq << 1;
+			if (sonar_dist_next < 4000)
+				sonar_valid_seq |= 0b1;
 			int32_t diff = (sonar_dist_next - sonar_distanse)*RESCAN_FRQ;
 			sonar_distanse = sonar_dist_next;
 			sonar_velocity = diff;
@@ -121,7 +143,7 @@ void Sonar_GetProcessedData(int32_t * dist, int32_t * dist_velo){
 		}
 	}
 	void Sonar_Postprocessing_init(){
-		static int32_t disatanse_velo_seq[32];
-		FIR_filter_int32_configue(&FIR_disatanse_velocity, disatanse_velo_seq, 1);
+		//static int32_t disatanse_velo_seq[32];
+		//FIR_filter_int32_configue(&FIR_disatanse_velocity, disatanse_velo_seq, 1);
 	}
 #endif

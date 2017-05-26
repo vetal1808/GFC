@@ -16,68 +16,33 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/vetal/Documents/projects/GFC/main.c" title="main.c" tooltip="C:/Users/vetal/Documents/projects/GFC/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2138" selectionTopPixel="355"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="467" selectionTopPixel="25"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="altitude_algorithm.c" partName="altitude_algorithm.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/altitude_algorithm/altitude_algorithm.c" title="altitude_algorithm.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/altitude_algorithm/altitude_algorithm.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2115" selectionTopPixel="775"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="timer.c" partName="timer.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/drivers/timer/timer.c" title="timer.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/drivers/timer/timer.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/drivers/timer/timer.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="860" selectionTopPixel="160"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="270" selectionTopPixel="50"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="telemetry.c" partName="telemetry.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/telemetry.c" title="telemetry.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/telemetry.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/remote control/telemetry.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="21" selectionOffset="31" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sonar.c" partName="sonar.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/sonar/sonar.c" title="sonar.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/sonar/sonar.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/sonar/sonar.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2327" selectionTopPixel="1555"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ESC_control.c" partName="ESC_control.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/drivers/ESC_control/ESC_control.c" title="ESC_control.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/drivers/ESC_control/ESC_control.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/drivers/ESC_control/ESC_control.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="874" selectionTopPixel="220"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sonar.h" partName="sonar.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/sonar/sonar.h" title="sonar.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/sonar/sonar.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/sonar/sonar.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="232" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="radio_channel.c" partName="radio_channel.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_channel.c" title="radio_channel.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_channel.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/remote control/radio_channel.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="326" selectionTopPixel="180"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="radio_control.h" partName="radio_control.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_control.h" title="radio_control.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_control.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/remote control/radio_control.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="334" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="telemetry.h" partName="telemetry.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/telemetry.h" title="telemetry.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/telemetry.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/remote control/telemetry.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="596" selectionTopPixel="115"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stab_algorithm.c" partName="stab_algorithm.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/stab_algorithm/stab_algorithm.c" title="stab_algorithm.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/stab_algorithm/stab_algorithm.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/stab_algorithms/stab_algorithm.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4771" selectionTopPixel="1875"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PID.c" partName="PID.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/stab_algorithm/PID.c" title="PID.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/stab_algorithm/PID.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/stab_algorithms/PID.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="1321" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stab_algorithm.h" partName="stab_algorithm.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/stab_algorithm/stab_algorithm.h" title="stab_algorithm.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/algorithms/stab_algorithm/stab_algorithm.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/algorithms/stab_algorithms/stab_algorithm.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="424" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="radio_control.c" partName="radio_control.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_control.c" title="radio_control.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_control.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/remote control/radio_control.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="563" selectionTopPixel="105"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="radio_channel.h" partName="radio_channel.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_channel.h" title="radio_channel.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/remote_control/radio_channel.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/remote control/radio_channel.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="389" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="timer.h" partName="timer.h" path="C:/Users/vetal/Documents/projects/GFC/GFC/drivers/timer/timer.h" title="timer.h" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/drivers/timer/timer.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/drivers/timer/timer.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="105" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BMP085_high.c" partName="BMP085_high.c" path="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/BMP085/BMP085_high.c" title="BMP085_high.c" tooltip="C:/Users/vetal/Documents/projects/GFC/GFC/sensors/BMP085/BMP085_high.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GFC/sensors/bmp085/BMP085_high.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="5199" selectionTopPixel="1949"/>
 </editor>
 </editors>
 <views>
@@ -94,11 +59,13 @@
 <expanded>
 <element path="/GFC"/>
 <element path="/GFC/algorithms"/>
-<element path="/GFC/algorithms/orientation"/>
-<element path="/GFC/remote control"/>
+<element path="/GFC/helpers"/>
+<element path="/GFC/helpers/blinker"/>
+<element path="/GFC/stm_lib"/>
+<element path="/GFC/stm_lib/inc"/>
 </expanded>
 <selection>
-<element path="/GFC/remote control/telemetry.h"/>
+<element path="/GFC/helpers/blinker/blinker.c"/>
 </selection>
 </viewState>
 </view>
@@ -257,8 +224,8 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <view id="org.coocox.codebugger.trace.ui.traceview"/>
 <view id="org.eclipse.debug.ui.VariableView"/>
@@ -268,37 +235,24 @@
 <view id="org.eclipse.debug.ui.MemoryView"/>
 <fastViewBars/>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d028aa">
-<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
-<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d028aa">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.74960214" ratioLeft="1413" ratioRight="472" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1d028aa">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.74960214" ratioLeft="1413" ratioRight="472" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1d028aa">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@8da456" ratio="0.6341853" ratioLeft="397" ratioRight="229" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1d028aa">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@8da456" ratio="0.6341853" ratioLeft="397" ratioRight="229" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1d028aa">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@17bce68" ratio="0.49973476" ratioLeft="942" ratioRight="943" relationship="2" relative="org.eclipse.ui.internal.ViewStack@8da456">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@17bce68" ratio="0.49973476" ratioLeft="942" ratioRight="943" relationship="2" relative="org.eclipse.ui.internal.ViewStack@8da456">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@12c3ed1" ratio="0.74960214" ratioLeft="1413" ratioRight="472" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1d028aa">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@12c3ed1" ratio="0.74960214" ratioLeft="1413" ratioRight="472" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1d028aa">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
@@ -306,22 +260,17 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.14439784" ratioLeft="241" ratioRight="1428" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1d028aa"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1e4def" ratio="0.63314563" ratioLeft="787" ratioRight="456" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.coocox.component.ui.Help" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1e4def" ratio="0.63314563" ratioLeft="787" ratioRight="456" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.coocox.component.ui.Help" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1dd59ee" ratio="0.67180616" ratioLeft="610" ratioRight="298" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1dd59ee" ratio="0.67180616" ratioLeft="610" ratioRight="298" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
 <page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="Memory"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -339,161 +288,162 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/remote control/radio_channel.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/remote control/radio_control.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/drivers/i2c routines/I2CRoutines.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/remote control/telemetry.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/drivers/timer/timer.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/drivers/timer/timer.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/sensors/sonar/sonar.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/sensors/sonar/sonar.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/sensors/bmp085/BMP085_high.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GFC/main.c"/>
 </editors>
-<item historyLabel="radio_control.c" index="2">
-<position info="not_deleted" x="510" y="0"/>
-</item>
 <item historyLabel="radio_channel.c" index="1">
-<position info="not_deleted" x="1145" y="0"/>
-</item>
-<item historyLabel="radio_control.c" index="2">
-<position info="not_deleted" x="701" y="0"/>
-</item>
-<item historyLabel="radio_channel.c" index="1">
-<position info="not_deleted" x="1145" y="0"/>
-</item>
-<item historyLabel="radio_control.c" index="2">
-<position info="not_deleted" x="563" y="0"/>
-</item>
-<item historyLabel="radio_channel.c" index="1">
-<position info="not_deleted" x="1145" y="0"/>
+<position info="not_deleted" x="1428" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="924" y="0"/>
+<position info="not_deleted" x="954" y="0"/>
 </item>
-<item historyLabel="radio_control.c" index="2">
-<position info="not_deleted" x="563" y="0"/>
-</item>
-<item historyLabel="radio_channel.c" index="1">
-<position info="not_deleted" x="326" y="0"/>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position info="not_deleted" x="2110" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1652" y="0"/>
+<position info="not_deleted" x="1651" y="0"/>
 </item>
-<item historyLabel="telemetry.h" index="4">
-<position info="not_deleted" x="596" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="715" y="0"/>
+<item historyLabel="timer.c" index="2">
+<position info="not_deleted" x="1073" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="554" y="0"/>
+<position info="not_deleted" x="953" y="0"/>
 </item>
-<item historyLabel="I2CRoutines.c" index="3">
+<item historyLabel="altitude_algorithm.c" index="3">
+<position info="not_deleted" x="1005" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="953" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position info="not_deleted" x="1866" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="955" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position info="not_deleted" x="1796" y="0"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2441" y="22"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="3294" y="0"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="428" y="22"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="955" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position info="not_deleted" x="1796" y="0"/>
+</item>
+<item historyLabel="timer.c" index="2">
+<position info="not_deleted" x="1073" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="953" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position info="not_deleted" x="1804" y="0"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2441" y="22"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="630" y="9"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2589" y="0"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2723" y="0"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2449" y="0"/>
+</item>
+<item historyLabel="sonar.h" index="5">
+<position info="not_deleted" x="232" y="0"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2449" y="0"/>
+</item>
+<item historyLabel="sonar.h" index="5">
+<position info="not_deleted" x="232" y="0"/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2449" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position info="not_deleted" x="1804" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="953" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
 <position/>
 </item>
-<item historyLabel="I2CRoutines.c" index="3">
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="754" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="447" y="0"/>
+<position info="not_deleted" x="953" y="0"/>
 </item>
-<item historyLabel="I2CRoutines.c" index="3">
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
+</item>
+<item historyLabel="sonar.c" index="4">
+<position info="not_deleted" x="2327" y="0"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
+</item>
+<item historyLabel="BMP085_high.c" index="6">
+<position info="not_deleted" x="4937" y="300"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
+</item>
+<item historyLabel="BMP085_high.c" index="6">
+<position info="not_deleted" x="5199" y="16"/>
+</item>
+<item historyLabel="altitude_algorithm.c" index="3">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="447" y="0"/>
+<position info="not_deleted" x="1647" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="447" y="0"/>
+<item historyLabel="timer.c" index="2">
+<position info="not_deleted" x="270" y="0"/>
 </item>
-<item historyLabel="I2CRoutines.c" index="3">
-<position info="not_deleted" x="16298" y="0"/>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="447" y="0"/>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1639" y="0"/>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
 </item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1294" y="16"/>
+<item historyLabel="altitude_algorithm.c" index="3">
+<position/>
 </item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1348" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="457" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="414" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1346" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1637" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1294" y="16"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1337" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="417" y="0"/>
-</item>
-<item historyLabel="timer.h" index="6">
-<position info="not_deleted" x="105" y="12"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="417" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="599" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="556" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="599" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="609" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1348" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1360" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1251" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1075" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1192" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1641" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1294" y="16"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1161" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="691" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1157" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="1249" y="0"/>
-</item>
-<item historyLabel="timer.c" index="5">
-<position info="not_deleted" x="860" y="0"/>
-</item>
-<item active="true" historyLabel="main.c" index="0">
-<position info="not_deleted" x="1641" y="0"/>
+<item active="true" historyLabel="main.c" index="7">
+<position info="not_deleted" x="1647" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -502,47 +452,54 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="timer.h" tooltip="GFC/drivers/timer/timer.h">
-<persistable path="/GFC/drivers/timer/timer.h"/>
+<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
+<persistable>
+<subPage/>
+</persistable>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="I2CRoutines.c" tooltip="GFC/drivers/i2c routines/I2CRoutines.c">
-<persistable path="/GFC/drivers/i2c routines/I2CRoutines.c"/>
+<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage" name="" tooltip="">
+<persistable>
+<org.coocox.welcome.ui.WelcomePage/>
+</persistable>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="radio_channel.h" tooltip="GFC/remote control/radio_channel.h">
-<persistable path="/GFC/remote control/radio_channel.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BMP085_high.c" tooltip="GFC/sensors/bmp085/BMP085_high.c">
+<persistable path="/GFC/sensors/bmp085/BMP085_high.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="radio_control.c" tooltip="GFC/remote control/radio_control.c">
-<persistable path="/GFC/remote control/radio_control.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sonar.h" tooltip="GFC/sensors/sonar/sonar.h">
+<persistable path="/GFC/sensors/sonar/sonar.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stab_algorithm.h" tooltip="GFC/algorithms/stab_algorithms/stab_algorithm.h">
-<persistable path="/GFC/algorithms/stab_algorithms/stab_algorithm.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sonar.c" tooltip="GFC/sensors/sonar/sonar.c">
+<persistable path="/GFC/sensors/sonar/sonar.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PID.c" tooltip="GFC/algorithms/stab_algorithms/PID.c">
-<persistable path="/GFC/algorithms/stab_algorithms/PID.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="timer.c" tooltip="GFC/drivers/timer/timer.c">
+<persistable path="/GFC/drivers/timer/timer.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stab_algorithm.c" tooltip="GFC/algorithms/stab_algorithms/stab_algorithm.c">
-<persistable path="/GFC/algorithms/stab_algorithms/stab_algorithm.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altitude_algorithm.c" tooltip="GFC/algorithms/altitude_algorithm/altitude_algorithm.c">
+<persistable path="/GFC/algorithms/altitude_algorithm/altitude_algorithm.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="telemetry.h" tooltip="GFC/remote control/telemetry.h">
-<persistable path="/GFC/remote control/telemetry.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="radio_control.h" tooltip="GFC/remote control/radio_control.h">
-<persistable path="/GFC/remote control/radio_control.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="motor_algorithm.h" tooltip="GFC/algorithms/motor_algorithm/motor_algorithm.h">
+<persistable path="/GFC/algorithms/motor_algorithm/motor_algorithm.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="radio_channel.c" tooltip="GFC/remote control/radio_channel.c">
 <persistable path="/GFC/remote control/radio_channel.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_tim.c" tooltip="GFC/stm_lib/src/stm32f10x_tim.c">
-<persistable path="/GFC/stm_lib/src/stm32f10x_tim.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_tim.h" tooltip="GFC/stm_lib/inc/stm32f10x_tim.h">
-<persistable path="/GFC/stm_lib/inc/stm32f10x_tim.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ESC_control.c" tooltip="GFC/drivers/ESC_control/ESC_control.c">
 <persistable path="/GFC/drivers/ESC_control/ESC_control.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="motor_algorithm.c" tooltip="GFC/algorithms/motor_algorithm/motor_algorithm.c">
 <persistable path="/GFC/algorithms/motor_algorithm/motor_algorithm.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_adc.h" tooltip="GFC/stm_lib/inc/stm32f10x_adc.h">
+<persistable path="/GFC/stm_lib/inc/stm32f10x_adc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="q_config.h" tooltip="GFC/helpers/q_config.h">
+<persistable path="/GFC/helpers/q_config.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blinker.c" tooltip="GFC/helpers/blinker/blinker.c">
+<persistable path="/GFC/helpers/blinker/blinker.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_adc.c" tooltip="GFC/stm_lib/src/stm32f10x_adc.c">
+<persistable path="/GFC/stm_lib/src/stm32f10x_adc.c"/>
 </file>
 </mruList>
 </workbench>

@@ -7,7 +7,7 @@
 	#include "stm32f10x_gpio.h"
 #endif
 static volatile uint32_t sync_time = 0;
-static volatile uint8_t SysTick_OVF_counter = 0;
+static volatile uint16_t SysTick_OVF_counter = 0;
 static volatile uint8_t ovf_event;
 
 
